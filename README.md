@@ -122,3 +122,11 @@ For point 3 & 4 same.... :D
 For point 5 i used Window functions with PARTITION BY month_number which is crucial in this query because it ensures the percentage of sales is calculated separately for each month
 Same with Point 6 i used Window functions with PARTITION BY demographic to fetch percentage of sales by demographic for each year in the dataset
 and in last Point 7 i used query for the total sales for each combination of age_band and demographic in the clean_weekly_sales table, but only for records where the platform is 'Retail'. The results are grouped by age_band and demographic, and then sorted by Total_Sales in descending order, showing the combinations with the highest sales first.
+
+
+## Conclusion:
+This project helped me strengthen my SQL skills. Key insights included identifying missing week numbers, understanding the sales performance across different platforms, and gaining insights into the demographic breakdown of sales.
+## SQL Queries:
+All SQL queries used in this project can be found in the `casestudy.sql` file in the repository.
+
+
