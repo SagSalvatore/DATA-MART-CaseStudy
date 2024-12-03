@@ -88,29 +88,29 @@ CREATE TABLE seq100(
     x INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 •	What this does: 
-o	Creates a table named seq100.
-o	The table has one column x, which is an integer and automatically increases with each new row because of the AUTO_INCREMENT feature.
-o	The column x is also set as the primary key, meaning each value in this column must be unique.
+Creates a table named seq100.
+The table has one column x, which is an integer and automatically increases with each new row because of the AUTO_INCREMENT feature.
+The column x is also set as the primary key, meaning each value in this column must be unique.
 ________________________________________
 Step 2: Insert Initial Values
 INSERT INTO seq100 VALUES (),(),(),(),(),(),(),(),(),();
 •	What this does: 
-o	Inserts 10 rows into the table seq100.
-o	Each row has an empty value () because x is AUTO_INCREMENT, so SQL automatically generates the numbers starting from 1.
+Inserts 10 rows into the table seq100.
+Each row has an empty value () because x is AUTO_INCREMENT, so SQL automatically generates the numbers starting from 1.
 Step 3: Repeat the Inserts
 INSERT INTO seq100 VALUES (),(),(),(),(),(),(),(),(),();
-•	This step is repeated multiple times (5 times in total in your example).
-•	Each time, 10 new rows are added, continuing the sequence of numbers. After all the inserts, the table will have 50 rows: 
+This step is repeated multiple times (5 times in total in your example).
+Each time, 10 new rows are added, continuing the sequence of numbers. After all the inserts, the table will have 50 rows: 
 Double the Numbers
 INSERT INTO seq100 SELECT x + 50 FROM seq100;
-•	What this does: 
-o	It takes all the existing numbers in the table and adds 50 to each one.
-o	Then it inserts these new numbers back into the table.
-o	After this step, the table will have numbers from 1 to 100: 
+What this does: 
+It takes all the existing numbers in the table and adds 50 to each one.
+Then it inserts these new numbers back into the table.
+After this step, the table will have numbers from 1 to 100: 
 View the Numbers
 SELECT * FROM seq100;
-•	What this does: 
-o	Displays all the rows in the table, showing numbers from 1 to 100.
+What this does: 
+Displays all the rows in the table, showing numbers from 1 to 100.
 ________________________________________
 Purpose of the Query
 This query creates a sequence of numbers from 1 to 100 in a table without manually entering all the numbers. It’s a preparatory step often used in tasks like:
